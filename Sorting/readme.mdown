@@ -1,0 +1,94 @@
+## Sorting Algorithms
+
+### insertion sort $O(n^2)$
+Idea: take i-th entry, insert it into sorted list that contains the first i-1 elements
+
+Procedure: for loop i, in each iteration, perform insertion
+
+$insertion_sort(A,n):$ return sorted list A with length n
+
+$search(A,val):$ return the index of element val in the list A
+
+### merge sort O(nlgn)
+
+Idea: divide and conquer paradigm
+
+step 1: divide A[n] into two lists A1[n/2] and A2[n/2], sort them
+
+step 2: merge two sorted lists
+
+step 3: repeat these two steps until each list only contains one element therefore it's already sorted! 
+
+merge(A1,A2): merge two sorted lists A1 and A2, return the merged list A
+
+merge(A,p,q,r): merge two sorted sublists in list A: list A1 starting from p index to q and A2 from q+1 to r
+
+merge_sort(A,p,r): sort list A from index p to r  
+
+
+### bubble sort 
+
+repeatedly swapping adjacent elements that are out of order
+
+bubble_sort(A): sort list A
+
+Or we can repeatedly sort max in the sublist and put it to the end
+
+bubble_sort_v2(A): sort list A
+
+### heapsort O(nlgn) 
+
+#### heaps 
+as a data structure
+
+max-heap: for every node, the value of the node $\le$ its parent
+min-heap: for every node, the value of the node $\ge$ its parent
+
+
+#### Max-heapify(A,i,heap_size): 
+
+search max in A[i] and its children, then swap A[i] and max if necessary and Max-heapify(A,max) again
+
+Max_heapify(A,i,heap_size): manipulate A itself s.t. it has the max-heap structure starting from node i. We only manipulate the first heap_size elements
+
+
+#### Build-max-heap(A, heap_size):
+start from the last parent point i 
+perform max-heapify(A,i) and then repeat until go through the whole map
+
+Build_Max_heap(A,heap_size): manipulate A itself s.t. it has the max-heap structure. We only manipulate the first heap_size elements
+
+
+#### heapsort
+since in a max-heap, the root is alway the maximum, we swap A[0] and A[n-1] and then build max-heap for the first n-1 elements in A, then repeat until go through the whole list
+
+heapsort(A): sort list A
+
+#### heap-Max(A)
+heap_Max(A): return the maximum value in max-heap list A
+
+#### heap-Max-Extract(A)
+heap_Max_Extract(A): return and extract the maximum value in max-heap list A
+
+
+#### heap-Max-Increase(A,i,key)
+heap_Max_Increase(A,i,key): increse A[i] to key and maintain the max-heap structure
+
+
+#### heap-Max-Insert(A,key)
+heap_Max_Insert(A,key): insert a new element key into A and maintain the max-heap structure
+
+
+### quicksort O(nlgn)
+
+
+### counting sort
+
+
+### radix sort
+
+
+### bucket sort
+
+
+

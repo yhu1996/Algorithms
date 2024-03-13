@@ -5,9 +5,9 @@ Idea: take i-th entry, insert it into sorted list that contains the first i-1 el
 
 Procedure: for loop i, in each iteration, perform insertion
 
-$insertion_sort(A,n):$ return sorted list A with length n
+insertion_sort(A,n): return sorted list A with length n
 
-$search(A,val):$ return the index of element val in the list A
+search(A,val): return the index of element val in the list A
 
 ### merge sort O(nlgn)
 

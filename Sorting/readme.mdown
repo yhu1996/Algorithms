@@ -53,14 +53,14 @@ Max_heapify(A,i,heap_size): manipulate A itself s.t. it has the max-heap structu
 
 
 #### Build-max-heap(A, heap_size):
-start from the last parent point i 
+Starting from the last parent point i 
 perform max-heapify(A,i) and then repeat until go through the whole map
 
 Build_Max_heap(A,heap_size): manipulate A itself s.t. it has the max-heap structure. We only manipulate the first heap_size elements
 
 
 #### heapsort
-since in a max-heap, the root is alway the maximum, we swap A[0] and A[n-1] and then build max-heap for the first n-1 elements in A, then repeat until go through the whole list
+since in a max-heap, the root is always the maximum, we swap A[0] and A[n-1] and then build max-heap for the first n-1 elements in A, then repeat until go through the whole list
 
 heapsort(A): sort list A
 
@@ -86,7 +86,9 @@ based on the divide-and-conquer paradigm
 start with an array A, index from p to r
 
 step 1: divide into two subarrays index from p to q-1 and q+1 to r s.t. elements in the first array are less than or equal to each elements in the second array
+
 step 2: sort two subarrays by recursive calls to quicksort
+
 step 3: combine them 
 
 now the task is to rearrange the array A st we can divide it following the rule in step 1: 
@@ -105,7 +107,10 @@ then A[i] should be at position c[A[i]]
 ### bucket sort
 
 Assume each element in the array satisfies 0  <= A[i] < 1 and the length of A is n 
+
 Step 1: put each element into buckets B[] according to A[i] -> the list B[nA[i]]
+
 Step 2: sort list B[]
+
 Step 3: concatenate the lists B[] together in order
 

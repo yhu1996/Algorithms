@@ -101,10 +101,11 @@ Assume we know the max value of the list A which is k.
 For each element, we count how many elements less than or equal to it, say c[A[i]]
 then A[i] should be at position c[A[i]]
 
-### radix sort
-
 
 ### bucket sort
 
-
+Assume each element in the array satisfies 0  <= A[i] < 1 and the length of A is n 
+Step 1: put each element into buckets B[] according to A[i] -> the list B[nA[i]]
+Step 2: sort list B[]
+Step 3: concatenate the lists B[] together in order
 

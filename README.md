@@ -7,5 +7,4 @@
 - heapsort
 - quicksort
 - counting sort
-- radix sort
 - bucket sort

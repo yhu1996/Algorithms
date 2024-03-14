@@ -81,9 +81,25 @@ heap_Max_Insert(A,key): insert a new element key into A and maintain the max-hea
 
 ### quicksort O(nlgn)
 
+based on the divide-and-conquer paradigm
+
+start with an array A, index from p to r
+
+step 1: divide into two subarrays index from p to q-1 and q+1 to r s.t. elements in the first array are less than or equal to each elements in the second array
+step 2: sort two subarrays by recursive calls to quicksort
+step 3: combine them 
+
+now the task is to rearrange the array A st we can divide it following the rule in step 1: 
+take the last element A[r] as a key 
+if element <= key: put it to 1st array
+else: put it to 2nd array
+finally, swap key and q-th element
 
 ### counting sort
 
+Assume we know the max value of the list A which is k.
+For each element, we count how many elements less than or equal to it, say c[A[i]]
+then A[i] should be at position c[A[i]]
 
 ### radix sort
 
